@@ -1,0 +1,90 @@
+
+//按钮类型按钮
+.btn{
+    line-height: $line-height-base;
+    position: relative;
+    display: inline-block;
+    font-weight: $font-weight-normal;
+    white-space: nowrap;
+    text-align: center;
+    background-image: none;
+    cursor: pointer;
+    @include boxShadow(0px 0 .125rem0rgba(0,0,0,.015));
+    color: $body-color;
+    vertical-align: middle;
+    border: $btn-border-width solid transparent;
+    @include button-size($btn-padding-y,$btn-padding-x,$btn-font-size,$border-radius);
+    transition:$btn-transition;
+    &.disabled,
+    &[disabled]
+    {
+        cursor: not-allowed;
+        opacity: $btn-disabled-opacity;
+        box-shadow: none;
+        > * {
+            pointer-events: none;
+        }
+    }
+}
+.btn-default {
+    @include button-style( $white,$gray-400,$body-color,$white, $primary, $primary );
+}
+.btn-primary {
+    @include button-style( $primary,$primary,$white );
+}
+.btn-dashed{
+    @include button-style( $white,$gray-400,$body-color );
+    border-style: dashed;
+}
+.btn-text {
+    @include button-style( $transparent,$transparent,$body-color );
+    &:focus,
+    &.focus {
+        outline: none;
+    }
+}
+.btn-ghost {
+    @include button-style( $transparent,$gray-400,$border-color );
+    &:focus,
+    &.focus {
+        outline: none;
+    }
+}
+.btn-link {
+    @include button-style( $transparent,$transparent,$primary );
+    &:focus,
+    &.focus {
+        outline: none;
+    }
+}
+//按钮大小
+
+.btn-large{
+    @include button-size( $btn-padding-y-lg,$btn-padding-x-lg,$btn-font-size-lg,$btn-border-radius-lg );
+}
+.btn-small {
+    @include button-size( $btn-padding-y-sm,$btn-padding-x-sm,$btn-font-size-sm,$btn-border-radius-sm );
+}
+
+//调整按钮宽度为父元素宽度
+.btn-block {
+    width: 100%;
+}
+
+//danger属性
+.btn-danger {
+    @include button-style( $danger,$danger,$white );
+}
+//禁用按钮
+.btn-disabled {
+    @include button-style( $disabledBg,$disabledBc,$disabledColor );
+}
+
+//形状
+.btn-circle {
+    border-radius: 50%;
+    min-width: 2.5rem;
+}
+.btn-round {
+    border-radius: 2rem;
+}

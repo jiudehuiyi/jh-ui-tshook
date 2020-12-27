@@ -1,10 +1,16 @@
 //色彩系统
 $white:#fff !default;
-$gray-100:#f8f9fa !default;
-$gray-600:#6c757d !default;
-$gray-800:#343a40 !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
 $black:#000 !default;
-$blue:#0d6efd !default;
+$blue:#1890FF !default;
 $indigo:#6610f2 !default;
 $purple:#6f42c1 !default;
 $pink:#d63384 !default;
@@ -13,7 +19,12 @@ $orange:#fd7e14 !default;
 $yellow:#faab14 !default;
 $green:#52c41a !default;
 $teal:#20c997 !default;
-$cyan:#17a2b8 !default; 
+$cyan:#17a2b8 !default;
+$transparent:transparent; 
+$disabledBg:#f5f5f5;
+$disabledBc:#d9d9d9;
+$disabledColor:rgba( 0,0,0,.25 );
+
 
 //主题色彩
 $primary:$blue !default;
@@ -21,7 +32,7 @@ $secondary:$gray-600 !default;
 $success:$green !default;
 $info:$cyan !default;
 $warning:$yellow !default;
-$danger:$red !default;
+$danger:#ff4d4f !default;
 $light:$gray-100 !default;
 $dark:$gray-800 !default;
 
@@ -68,7 +79,7 @@ $link-hover-decoration:underline !default;
 //body
 $body-bg:$white !default;
 $body-color:$gray-800 !default;
-$body-text-color:null !default;
+$body-text-align:null !default;
 
 // Spacing
 $spacer: 1rem !default;
