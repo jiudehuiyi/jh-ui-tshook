@@ -1,6 +1,7 @@
 import React,{ useState } from "react";
 import classnames from "classnames";
 
+
 export type ButtonShape = "circle" | "round";
 export type ButtonSize = "large" | "middle" | "small";
 export type ButtonType = "primary" | "ghost" | "dashed" | "link" | "text" | "default";
@@ -42,7 +43,7 @@ const Button:React.FC<ButtonProps> = (props)=>{
         className,block,danger,disabled,ghost,href,htmlType,icon,loading,shape,size,
         btnType  ,children,...restProps
     } = props;
-    const iconNode = icon ? icon : null;
+    const iconNode = typeof icon === "string" ?  icon : null;
 
     //合并类名，为所传得属性调整为相应得样式,
     //prefixCls为定义常规属性，className为外部传入的类名,{}则为传入的props属性需要改变对应的样式

@@ -1,0 +1,91 @@
+
+.menu {
+    display: flex;
+    flex-flow: row no-wrap;
+    list-style-type: none;
+    margin-bottom: $menu-item-margin-bottom;
+    border-bottom: $menu-border-width solid $menu-border-color;
+    &-item {
+        padding: $menu-item-padding-y $menu-item-padding-x;
+        cursor: pointer;
+        transition: $menu-item-transition;
+        &:hover,&:focus {
+            text-decoration: none;
+            color: $primary;
+        }          
+
+    }
+    &-item-danger {
+        color: $danger;
+    }
+    &-item-disabled {
+        color: $black;
+        cursor: not-allowed;
+        opacity: 0.25;
+    }
+    &-item-disabled:hover {
+        color: $black;
+        opacity: 0.25;
+    }
+    &-item-active {
+        color: $primary;
+        border-bottom: $menu-border-width solid $primary;
+    
+    }
+
+    .subMenu-item {
+        position: relative;
+        .subMenu-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .arrow-icon {
+                transition: transform .25s ease-in-out;
+                margin-left: 3px;
+                &:hover {
+                    transform: rotate(180deg);
+                }
+            }
+            .reverse-arrow {
+                transform: rotate(180deg);
+            }
+        }
+    
+    }
+    .sub-menu {
+        list-style: none;
+        display: none;
+    }
+    .menu-open {
+        display: block;
+        opacity: 1;
+
+    }
+
+}
+.theme-dark {
+     background-color:$theme-backgroundColor ;
+     color: $theme-color;
+}
+
+
+.menu-horizontal {
+
+}
+.menu-vertical {
+    flex-direction: column;
+    border-bottom: 0;
+    border-right: $menu-border-width solid $menu-border-color;
+
+    .menu-item-active {
+        color: $primary;
+        border-right: $menu-border-width solid $primary;
+        border-bottom: $menu-border-width solid $transparent;    
+    }
+    .menu-item-selected {
+        color: $primary;
+        border-right: $menu-border-width solid $primary;
+        border-bottom: $menu-border-width solid $transparent;    
+
+    }
+}

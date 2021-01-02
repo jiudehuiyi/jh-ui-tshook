@@ -5,8 +5,9 @@ import classnames from "classnames";
 
 export type ThemeProps = "primary" | "secondary" | "success" | "info" | "warning" | "danger" | "light"|"dark";
 //FontAwesomeIconProps内置部分属性类型
-interface IconProps extends FontAwesomeIconProps {
+export interface IconProps extends FontAwesomeIconProps {
     theme?:ThemeProps;
+   
 }
 
 const Icon:React.FC<IconProps> = (props)=>{
