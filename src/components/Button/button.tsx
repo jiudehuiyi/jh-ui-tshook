@@ -107,8 +107,13 @@ Button.defaultProps = {
     block:false,
     danger:false,
 }
+Button.displayName="Button";
 
 export default Button;
 
 
-//暂缺loading和icon属性
+//暂缺loading
+
+
+
+

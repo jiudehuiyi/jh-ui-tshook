@@ -1,0 +1,42 @@
+.jh-alert {
+    box-sizing: border-box;
+    margin: 0;
+    color: rgba(0,0,0,.85);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5;
+    list-style: none;
+    position: relative;
+    display: flex;
+    box-align: center;
+    align-items: align;
+    padding: 8px 15px;
+    border-radius: 2px;
+    flex-direction: column;
+}
+
+.jh-warning {
+    @include alert-style( $alert-border-warning,$alert-bg-warning );
+}
+.jh-success {
+    @include alert-style( $alert-border-success,$alert-bg-success );
+}
+.jh-info {
+    @include alert-style( $alert-border-info,$alert-bg-info );
+}
+.jh-error {
+    @include alert-style( $alert-border-error,$alert-bg-error );
+}
+.jh-alert-closable {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform:translateY(-50%);
+    cursor: pointer;
+    padding: 0px;
+    overflow: hidden;
+    font-size: 12px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}

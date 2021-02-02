@@ -9,4 +9,4 @@
 # 7.transform:object,动画
 # 8.mask:array,遮罩图标,mask={['far', 'circle']}
 # tip:请更详细请看上述链接
-# 图标种类请看库:@fortawesome/free-solid-svg-icons
+# 图标种类请看库:@fortawesome/free-solid-svg-icons,https://fontawesome.com/icons?d=gallery

@@ -6,6 +6,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "files":["src/types.d.ts"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,

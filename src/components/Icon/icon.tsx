@@ -27,10 +27,12 @@ const Icon:React.FC<IconProps> = (props)=>{
             />
         )
 }
-
+Icon.displayName = "Icon";
 export default Icon;
 
 
 
 
 
+
+  

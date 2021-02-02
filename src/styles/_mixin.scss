@@ -43,3 +43,8 @@
     -ms-border-radius: $border-radius;
     -o-border-radius: $border-radius;
 }
+
+@mixin alert-style($borderColor,$bgColor) {
+    border:1px solid $borderColor;
+    background-color: $bgColor;
+}

@@ -8,6 +8,9 @@ import Icon from "./components/Icon/icon";
 import Menu from "./components/Menu/menu";
 import Item from "./components/Menu/components/item";
 import SubMenu from "./components/Menu/components/subMenu";
+import Alert from "./components/Alert/alert";
+import TextLoop from 'react-text-loop';
+
 library.add( fas );//添加所有种类的图标(不用一个个的进行引入)
 
 function App() {
@@ -21,7 +24,7 @@ function App() {
       />
       
 
-      <Menu 
+      {/* <Menu 
         mode="vertical"  
         // mode="horizontal"
         style={{ width:"200px" }} 
@@ -46,7 +49,13 @@ function App() {
           <Item danger={true} key={"2"}>888</Item>
           <Item disabled={true} key={"3"}>999</Item>
         </SubMenu>
-      </Menu>
+      </Menu> */}
+
+      <Alert  message="message"  closable={true} onClose={ ()=>console.log(22222) } closeText="closeText"  description="Error Description Error Description Error Description Error Description"/>
+      <Alert type="success"  message="message" closeText="closeText"  description="Error Description Error Description Error Description Error Description" />
+      <Alert type="info" message={"info" } loopMessage={[ "aaa","bbb" ]} />
+      <Alert type="error" message="message" />
+
      <Button btnType="default" size="small" danger={true} disabled={true}  shape="circle">default</Button>
      <Button btnType="primary" size="middle" danger={true} disabled={true} shape="round"  >primary</Button>
      <Button btnType="dashed" size="large">dashed</Button>
