@@ -9,8 +9,10 @@ import Menu from "./components/Menu/menu";
 import Item from "./components/Menu/components/item";
 import SubMenu from "./components/Menu/components/subMenu";
 import Alert from "./components/Alert/alert";
-import TextLoop from 'react-text-loop';
 
+import Row from "./components/Grid/Row";
+import Col from "./components/Grid/Col";
+import Grid from "./components/Grid/grid";
 library.add( fas );//添加所有种类的图标(不用一个个的进行引入)
 
 function App() {
@@ -22,6 +24,17 @@ function App() {
         icon='coffee' 
         theme="primary"
       />
+      <Row gutter={10}>
+        <Col span={8} >1111</Col>
+        <Col span={8} pull={3}>222</Col>
+        <Col span={8}>333</Col>
+      </Row>
+      <Grid.Row>
+        <Grid.Col>1111</Grid.Col>
+        <Grid.Col>1111</Grid.Col>
+        <Grid.Col>1111</Grid.Col>
+
+      </Grid.Row>
       
 
       {/* <Menu 

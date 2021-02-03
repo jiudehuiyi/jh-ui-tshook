@@ -48,3 +48,18 @@
     border:1px solid $borderColor;
     background-color: $bgColor;
 }
+
+@mixin cols-rules($n,$i) {
+    width:  $i * 100% /$n ;
+}
+@mixin  cols-offset-rules($n,$i) {
+    margin-left:  $i * 100% / $n ;
+}
+@mixin  cols-push-rules($n,$i) {
+    position: relative;
+    left: $i * 100% / $n;
+}
+@mixin cols-pull-rules($n,$i) {
+    position: relative;
+    right: $i * 100% / $n;
+}
