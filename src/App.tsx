@@ -13,6 +13,7 @@ import Alert from "./components/Alert/alert";
 import Row from "./components/Grid/Row";
 import Col from "./components/Grid/Col";
 import Grid from "./components/Grid/grid";
+import Divider from "./components/Divider/divider";
 library.add( fas );//添加所有种类的图标(不用一个个的进行引入)
 
 function App() {
@@ -35,7 +36,11 @@ function App() {
         <Grid.Col>1111</Grid.Col>
 
       </Grid.Row>
-      
+      <Divider orientation="left">Text</Divider>
+      <Divider orientation="right">Text</Divider>
+
+      <Divider dashed={true}>
+      </Divider>
 
       {/* <Menu 
         mode="vertical"  

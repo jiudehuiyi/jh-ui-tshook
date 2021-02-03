@@ -1,0 +1,78 @@
+.jh-divider {
+    border-top: 1px solid rgba(0,0,0,.6);
+    color: rgba(0,0,0,.85);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    -webkit-font-feature-settings: "tnum";
+    font-feature-settings: "tnum";
+}
+.jh-divider-horizontal {
+    display: flex;
+    width: 100%;
+    min-width: 100%;
+    margin: 24px 0px;
+    clear: both;
+}
+.jh-divider-vertical {
+    position: relative;
+    top: -.06em;
+    display: inline-block;
+    height: .9em;
+    margin: 0 8px;
+    vertical-align: middle;
+    border-top: 0;
+    border-left: 1px solid rgba(0,0,0,.06);
+}
+.jh-divider-with-text {
+    display: flex;
+    margin: 16px 0px;
+    color: rgba(0,0,0,.85);
+    font-weight: 500;
+    font-size: 16px;
+    white-space: nowrap;
+    text-align: center;
+    border-top: 0;
+    border-color: rgba(0,0,0,.6);
+}
+.jh-divider-with-text::before,.jh-divider-with-text::after{
+    content: "";
+    position: relative;
+    top: 50%;
+    width: 50%;
+    border-top: 1px solid transparent;
+    border-top-color: inherit;
+    transform:translateY(50%);
+}
+.jh-divider-inner-text {
+    display: inline-block;
+    margin: 0 1rem;
+}
+.jh-divider-dashed {
+    border-top-style: dashed;
+}
+.jh-divider-dashed::before,.jh-divider-dashed::after{
+    border-top-style: dashed;
+}
+.jh-divider-plain {
+    color: rgba(0,0,0,.85);
+    font-weight: 400;
+    font-size: 14px;
+}
+.jh-divider-with-text-left::before {
+    top: 50%;
+    width: 5%;
+}
+.jh-divider-with-text-left::after {
+    top: 50%;
+    width: 95%;
+}
+.jh-divider-with-text-right::before {
+    top: 50%;
+    width: 95%;
+}
+.jh-divider-with-text-right::after {
+    top: 50%;
+    width: 5%;
+}
