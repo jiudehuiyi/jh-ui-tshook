@@ -47,9 +47,9 @@ const Alert:React.FC< Omit<Partial<IAlertProps>,"message"> & { message:string | 
     },[])
 
     const renderLoopMessage = (loopMessage:Array<string | undefined>)=>{
-        return loopMessage.map( (item:string | undefined)=>{
+        return loopMessage.map( (item:string | undefined,index:number)=>{
             return (
-                <div>
+                <div key={ index }>
                     {
                         item
                     }
