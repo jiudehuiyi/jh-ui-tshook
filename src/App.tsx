@@ -14,6 +14,7 @@ import Row from "./components/Grid/Row";
 import Col from "./components/Grid/Col";
 import Grid from "./components/Grid/grid";
 import Divider from "./components/Divider/divider";
+import Space from "./components/Space/space";
 library.add( fas );//添加所有种类的图标(不用一个个的进行引入)
 
 function App() {
@@ -41,6 +42,27 @@ function App() {
 
       <Divider dashed={true}>
       </Divider>
+
+      <Space 
+        // direction="vertical"
+        // size="large"
+        // size={100}
+        wrap={true}
+        split={ "|" }
+      >
+        <Button btnType="primary">space1</Button>
+        <Button btnType="primary">space2</Button>
+        <Button btnType="primary">space3</Button>
+        <Button btnType="primary">space4</Button>
+        <Button btnType="primary">space1</Button>
+        <Button btnType="primary">space2</Button>
+        <Button btnType="primary">space3</Button>
+        <Button btnType="primary">space4</Button>
+        <Button btnType="primary">space1</Button>
+        <Button btnType="primary">space2</Button>
+        <Button btnType="primary">space3</Button>
+        <Button btnType="primary">space4</Button>
+      </Space>
 
       {/* <Menu 
         mode="vertical"  

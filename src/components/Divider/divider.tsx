@@ -25,7 +25,6 @@ const Divider:React.FC< Partial<IDividerProps> > = ( props )=>{
         [`jh-divider-plain`]:plain,
         [`jh-divider-with-text-${orientation}`]:true,
     });
-    console.log( children )
     return (
         <div
             className={ classes }
