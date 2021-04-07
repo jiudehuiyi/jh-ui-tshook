@@ -15,13 +15,34 @@ import Col from "./components/Grid/Col";
 import Grid from "./components/Grid/grid";
 import Divider from "./components/Divider/divider";
 import Space from "./components/Space/space";
+
+import Breadcrumb from "./components/Breadcrumb/breadcrumb";
+import BreadcrumbItem from "./components/Breadcrumb/BreadcrumbItem";
 library.add( fas );//添加所有种类的图标(不用一个个的进行引入)
 
 function App() {
+
+ 
+  
+
   return (
     <div className="App">
        
       <Button>原始按钮</Button>
+      <Breadcrumb  routes={[
+          {
+            path: 'search/products',
+            breadcrumbName: '搜索'
+          },
+          {
+            path: 'goods-details',
+            breadcrumbName: '商品详情'
+          },
+        ]}>
+        <BreadcrumbItem>1111</BreadcrumbItem>
+        <BreadcrumbItem>222</BreadcrumbItem>
+        <BreadcrumbItem>333</BreadcrumbItem>
+      </Breadcrumb>
       <Icon 
         icon='coffee' 
         theme="primary"
@@ -44,7 +65,7 @@ function App() {
       </Divider>
 
       <Space 
-        // direction="vertical"
+        direction="vertical"
         // size="large"
         // size={100}
         wrap={true}

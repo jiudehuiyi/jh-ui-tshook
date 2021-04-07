@@ -2,7 +2,6 @@ import React from "react";
 import { FontAwesomeIcon,FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
 import classnames from "classnames";
 
-
 export type ThemeProps = "primary" | "secondary" | "success" | "info" | "warning" | "danger" | "light"|"dark";
 //FontAwesomeIconProps内置部分属性类型
 export interface IconProps extends FontAwesomeIconProps {
