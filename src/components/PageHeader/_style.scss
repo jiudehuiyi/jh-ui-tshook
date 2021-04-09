@@ -1,0 +1,86 @@
+.jh-page-header {
+    color: $black;
+    opacity: .85;
+    font-size: $font-size-sm;
+    line-height: $line-height-base;
+    list-style: none;
+    position: relative;
+    padding: 14px 26px;
+    background-color: $white;
+    &-ghost {
+        background-color: inherit;
+    }
+    &-has-breadcrumb {
+        padding-top: 12px;
+    }
+
+    &-back {
+        margin-right: 16px;
+        font-size: 16px;
+        line-height: 1;
+    }
+
+    &-heading {
+        display: flex;
+        justify-content: space-between;
+        &-left {
+            display: flex;
+            align-items: center;
+            margin: 4px 0px;
+            overflow: hidden;
+        }
+        &-title {
+            margin-right: 12px;
+            margin-bottom: 0px;
+            color: $black;
+            opacity: .85;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 32px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        &-subTitle {
+            margin-right: 12px;
+            color: rgba(0,0,0,.45);
+            font-size: 14px;
+            line-height: 1.5715;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        &-tags {
+            font-size: 14px;
+            line-height: 1.5;
+            list-style: none;
+            display: inline-block;
+            height: auto;
+            margin: 0 8px 0 0;
+            padding: 0 7px;
+            background: #fafafa;
+            border: 1px solid #d9d9d9;
+            border-radius: 2px;
+            opacity: 1;
+            transition: all .3s;
+        }
+        &-extra {
+            display: flex;
+            align-items: center;
+            margin: 4px 0px;
+            white-space: nowrap;
+        }
+    }
+    &-compact &-heading {
+        flex-wrap: wrap;
+    }
+    &-content {
+        padding-top: 12px;
+    }
+    &-footer {
+        margin-top: 16px;
+    }
+    &-has-footer {
+        padding-bottom: 0px;
+    }
+}

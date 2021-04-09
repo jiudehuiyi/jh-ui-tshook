@@ -18,17 +18,32 @@ import Space from "./components/Space/space";
 
 import Breadcrumb from "./components/Breadcrumb/breadcrumb";
 import BreadcrumbItem from "./components/Breadcrumb/BreadcrumbItem";
+import PageHeader from "./components/PageHeader/page-header";
 library.add( fas );//添加所有种类的图标(不用一个个的进行引入)
 
 function App() {
 
  
-  
+  const routes = [
+    {
+      path: 'index',
+      breadcrumbName: 'First-level Menu',
+    },
+    {
+      path: 'first',
+      breadcrumbName: 'Second-level Menu',
+    },
+    {
+      path: 'second',
+      breadcrumbName: 'Third-level Menu',
+    },
+  ];
 
   return (
     <div className="App">
        
       <Button>原始按钮</Button>
+      <PageHeader  title="PageHeader" subTitle={"subTitle"} tags={"tags"} extra={[<span>111</span>,<span>2222</span>]} ghost={true} breadcrumb={{ "routes":routes }}  ></PageHeader>
       <Breadcrumb  routes={[
           {
             path: 'search/products',
