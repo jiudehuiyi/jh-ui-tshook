@@ -1,7 +1,7 @@
 {
   "name": "jh-ui-tshook",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@babel/core": "7.12.3",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
@@ -63,6 +63,7 @@
     "prompts": "2.4.0",
     "rc-animation": "^1.0.3",
     "rc-dropdown": "^3.2.0",
+    "rc-pagination": "^3.1.6",
     "rc-resize-observer": "^1.0.0",
     "rc-util": "^5.9.4",
     "react": "^17.0.1",
