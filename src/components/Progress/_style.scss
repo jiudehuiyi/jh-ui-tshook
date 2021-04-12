@@ -1,0 +1,80 @@
+.jh-progress {
+
+    &-text {
+        display: inline-block;
+        width: 2em;
+        margin-left: 8px;
+        color: #000;
+        opacity: .85;
+        font-size: 1em;
+        line-height: 1;
+        white-space: nowrap;
+        text-align: left;
+        vertical-align: middle;
+        word-break: normal;
+    }
+
+
+    // type === steps
+
+    &-steps-outer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &-steps-item {
+        flex-shrink: 0;
+        min-width: 2px;
+        margin-right: 2px;
+        background-color: #f3f3f3;
+        transition: all .3s;
+    }
+    &-steps-item-active {
+        background-color: $primary;
+    }
+    &-small {
+        font-size: 12px;
+    }
+    &-default {
+        font-size: 14px;
+    }
+    &-status-normal &-bg {
+        background-color: $primary;
+    }
+    &-status-active &-bg {
+        background-color: $primary;
+    }
+    &-status-exception &-bg {
+        background-color: #ff4d4f;
+    }
+    &-status-success &-bg {
+        background-color: #52c41a;
+    }
+
+    //type === line
+    &-outer {
+        display: inline-block;
+        width: 100%;
+        margin-right: 0px;
+        padding-right: 0px;
+    }
+    &-show-info &-outer {
+        margin-right: calc(-2em - 8px);
+        padding-right: calc(2em + 8px);
+    }
+    &-inner {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        vertical-align: middle;
+        background-color: #f5f5f5;
+        border-radius: 100px;
+    }
+    &-bg ,-success-bg {
+        position: relative;
+        background-color: $primary;
+        border-radius: 100px;
+        transition: all .4s cubic-bezier(.08,.82,.17,1) 0s;
+    }
+}
