@@ -20,7 +20,12 @@ import Breadcrumb from "./components/Breadcrumb/breadcrumb";
 import BreadcrumbItem from "./components/Breadcrumb/BreadcrumbItem";
 import PageHeader from "./components/PageHeader/page-header";
 import Pagination from "./components/Pagination/pagination";
+import Steps from "./components/Steps/steps";
+import Progress from "./components/Progress/progress";
+import { Circle } from "rc-progress"
 library.add( fas );//添加所有种类的图标(不用一个个的进行引入)
+
+const { Step } = Steps;
 
 function App() {
 
@@ -45,6 +50,14 @@ function App() {
        
       <Button>原始按钮</Button>
       <Pagination></Pagination>
+      <Progress steps={5} percent={40}></Progress>
+      <Progress  percent={40} status="exception" ></Progress>
+      <Steps current={2}>
+        <Step title="111"></Step>
+        <Step title="2222"></Step>
+        <Step title="333"></Step>
+        <Step title="444"></Step>
+      </Steps>
       <PageHeader  title="PageHeader" subTitle={"subTitle"} tags={"tags"} extra={[<span>111</span>,<span>2222</span>]} ghost={true} breadcrumb={{ "routes":routes }}  ></PageHeader>
       <Breadcrumb  routes={[
           {
