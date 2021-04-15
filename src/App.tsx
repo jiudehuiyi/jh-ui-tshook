@@ -25,6 +25,8 @@ import Progress from "./components/Progress/progress";
 import Radio from "./components/Radio/radio";
 import RadioButton from "./components/Radio/radio-button";
 import RadioGroup from "./components/Radio/radio-group";
+import Checkbox from "./components/Checkbox/checkbox";
+import CheckboxGroup from "./components/Checkbox/checkbox-group";
 library.add( fas );//添加所有种类的图标(不用一个个的进行引入)
 
 const { Step } = Steps;
@@ -78,6 +80,18 @@ function App() {
         <RadioButton >Radio-button1</RadioButton>
         <RadioButton>Radio-button2</RadioButton>
       </RadioGroup>
+
+      <CheckboxGroup name="aa">
+        <Checkbox>1111</Checkbox>
+        <Checkbox>2222</Checkbox>
+      </CheckboxGroup>
+
+      <CheckboxGroup name="bb">
+        <Checkbox>3333</Checkbox>
+        <Checkbox>4444</Checkbox>
+      </CheckboxGroup>
+
+
 
       <PageHeader  title="PageHeader" subTitle={"subTitle"} tags={"tags"} extra={[<span>111</span>,<span>2222</span>]} ghost={true} breadcrumb={{ "routes":routes }}  ></PageHeader>
       <Breadcrumb  routes={[
