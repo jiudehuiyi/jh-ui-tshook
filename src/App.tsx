@@ -22,14 +22,18 @@ import PageHeader from "./components/PageHeader/page-header";
 import Pagination from "./components/Pagination/pagination";
 import Steps from "./components/Steps/steps";
 import Progress from "./components/Progress/progress";
-import { Circle } from "rc-progress"
+import Radio from "./components/Radio/radio";
+import RadioButton from "./components/Radio/radio-button";
+import RadioGroup from "./components/Radio/radio-group";
 library.add( fas );//添加所有种类的图标(不用一个个的进行引入)
 
 const { Step } = Steps;
 
 function App() {
 
- 
+ const handleChange=(ev:any,value:any,) => {
+   console.log("value", value)
+ }
   const routes = [
     {
       path: 'index',
@@ -43,6 +47,11 @@ function App() {
       path: 'second',
       breadcrumbName: 'Third-level Menu',
     },
+  ];
+  const options = [
+    { label: 'Apple', value: 'Apple' },
+    { label: 'Pear', value: 'Pear' },
+    { label: 'Orange', value: 'Orange' },
   ];
 
   return (
@@ -58,6 +67,18 @@ function App() {
         <Step title="333"></Step>
         <Step title="444"></Step>
       </Steps>
+
+      <RadioGroup></RadioGroup>
+      <RadioGroup>
+        <Radio >Radio1</Radio>
+        <Radio >Radio2</Radio>
+      </RadioGroup>
+
+      <RadioGroup name="ccc" size="large" options={options}>
+        <RadioButton >Radio-button1</RadioButton>
+        <RadioButton>Radio-button2</RadioButton>
+      </RadioGroup>
+
       <PageHeader  title="PageHeader" subTitle={"subTitle"} tags={"tags"} extra={[<span>111</span>,<span>2222</span>]} ghost={true} breadcrumb={{ "routes":routes }}  ></PageHeader>
       <Breadcrumb  routes={[
           {
