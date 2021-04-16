@@ -28,6 +28,7 @@ import RadioGroup from "./components/Radio/radio-group";
 import Checkbox from "./components/Checkbox/checkbox";
 import CheckboxGroup from "./components/Checkbox/checkbox-group";
 import Switch from "./components/Switch/switch";
+import Rate from "./components/Rate/rate";
 library.add( fas );//添加所有种类的图标(不用一个个的进行引入)
 
 const { Step } = Steps;
@@ -95,7 +96,7 @@ function App() {
         checkedChildren="开启" 
         unCheckedChildren="关闭" 
       />
-
+      <Rate />
 
 
       <PageHeader  title="PageHeader" subTitle={"subTitle"} tags={"tags"} extra={[<span>111</span>,<span>2222</span>]} ghost={true} breadcrumb={{ "routes":routes }}  ></PageHeader>
