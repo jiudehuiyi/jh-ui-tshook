@@ -1,0 +1,84 @@
+.jh-switch {
+    margin: 0px;
+    padding: 0px;
+    color:rgba($color: #000, $alpha: .85);
+    font-size: 14px;
+    line-height: 1.5;
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: 44px;
+    height: 22px;
+    line-height: 22px;
+    vertical-align: middle;
+    background-color: rgba($color: #000000, $alpha: .25);
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all .2s;
+    user-select: none;
+    outline: unset  !important;
+    border: unset;
+    &-small {
+        width: 28px;
+        height: 16px;
+        line-height: 16px;
+    }
+    &-handle {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 18px;
+        height: 18px;
+        transition: all .2s ease-in-out;
+    }
+    &-handle-small {
+        width: 12px;
+        height: 12px;
+    }
+    &-handle::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background-color: #fff;
+        border-radius: 9px;
+        box-shadow: 0px 2px 4px 0 rgb(0, 35, 11);
+        transition: all .2s ease-in-out;
+    }
+
+    &-checked {
+        background-color: $primary;
+    }
+    &-handle-checked {
+        left: calc( 100% - 20px );
+    }
+    &-handle-small {
+        left: calc( 100% - 16px );
+    }
+    &-inner {
+        display: block;
+        color: $white;
+        font-size: 12px;
+        margin: 0 7px 0px 25px;
+        transition: margin .2s;
+    }
+    &-inner-checked {
+        margin: 0 25px 0 7px;
+    }
+    &-disabled {
+        cursor: not-allowed;
+        opacity: .4;
+    }
+    &-loading {
+        position: relative;
+        & svg {
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            color: $primary;
+        }
+    }
+}

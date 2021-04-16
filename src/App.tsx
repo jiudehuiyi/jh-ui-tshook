@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState } from 'react';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {  fas } from '@fortawesome/free-solid-svg-icons'
 
@@ -27,15 +27,14 @@ import RadioButton from "./components/Radio/radio-button";
 import RadioGroup from "./components/Radio/radio-group";
 import Checkbox from "./components/Checkbox/checkbox";
 import CheckboxGroup from "./components/Checkbox/checkbox-group";
+import Switch from "./components/Switch/switch";
 library.add( fas );//添加所有种类的图标(不用一个个的进行引入)
 
 const { Step } = Steps;
 
 function App() {
 
- const handleChange=(ev:any,value:any,) => {
-   console.log("value", value)
- }
+ 
   const routes = [
     {
       path: 'index',
@@ -55,6 +54,11 @@ function App() {
     { label: 'Pear', value: 'Pear' },
     { label: 'Orange', value: 'Orange' },
   ];
+  const [switchChecked, setSwitchChecked] = useState(false)
+
+  const handleChange = (checked) => {
+    setSwitchChecked(!switchChecked);
+  }
 
   return (
     <div className="App">
@@ -86,10 +90,11 @@ function App() {
         <Checkbox>2222</Checkbox>
       </CheckboxGroup>
 
-      <CheckboxGroup name="bb">
-        <Checkbox>3333</Checkbox>
-        <Checkbox>4444</Checkbox>
-      </CheckboxGroup>
+      <Switch   
+        defaultChecked={true}
+        checkedChildren="开启" 
+        unCheckedChildren="关闭" 
+      />
 
 
 

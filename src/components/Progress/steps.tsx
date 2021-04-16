@@ -17,7 +17,7 @@ const Dashboard:React.FC<StepsProps> = (props) => {
 
      const current = Math.round( steps * (percent / 100) );
      const stepWidth = size === "small" ? 2 : 14;
-     const styledSteps = [];
+     const styledSteps:React.ReactNode[] = [];
      for(let i = 0; i < steps; i++){
          styledSteps.push(
              <div
